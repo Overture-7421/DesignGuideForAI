@@ -1,0 +1,57 @@
+# ==========================================================
+#  .gitignore — files Git should NEVER track
+#  Team [####] software project template
+#
+#  Rule of thumb: code and the design doc get committed.
+#  Secrets, big build folders, and editor/OS junk do NOT.
+#  When in doubt, ask a mentor before pushing.
+# ==========================================================
+
+# ---- 🔐 SECRETS (most important) -------------------------
+# Never commit API keys, passwords, or tokens.
+.env
+.env.*
+*.local
+secrets.*
+secret.*
+*.key
+*.pem
+credentials.json
+config.secret.*
+
+# ---- 🌐 Web / JavaScript / Node --------------------------
+node_modules/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.parcel-cache/
+
+# ---- 🐍 Python -------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- 💻 Editors & IDEs -----------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- 🖥️ Operating system junk ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 📦 Misc temporary files -----------------------------
+*.tmp
+*.bak
+*.old
