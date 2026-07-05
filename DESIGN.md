@@ -193,6 +193,11 @@ List each screen and what's on it. **Even a rough description or a phone-photo o
 
 > 💡 Hand-draw your screens on paper, take a photo, and give it to the AI. It can read sketches.
 
+**🎨 Already made a design in Claude Design?** Great — bring it in instead of describing it from scratch. Open your design, click **Export** (upper-right), and pick the path that fits what you're doing:
+- **Still planning here in chat?** Export a **screenshot or PDF** and attach it to your chat (or add it to the project). Reference it in this section — the AI can *see* your design and match it. *(Simplest, works for everyone.)*
+- **Ready to build it into our repo?** Choose **"Handoff to Claude Code"** — it sends the real design (components, colors, layout), not just a picture, so the code comes out much closer to your design. Or export **standalone HTML / a .zip** and drop the files into your project's `/src` folder.
+- ⚠️ Claude Design needs a paid plan and uses up usage fast, so have the person who made the design do the export, then share it with the team.
+
 ---
 
 ## 🟢 9. The tech (what it's built with)
