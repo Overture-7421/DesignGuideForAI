@@ -1,28 +1,52 @@
-# 🤖 Software Design Document (AI-Assisted)
+# 📄 Software Design Document
+
+> ✏️ **Fill this in first — two minutes.** It's how a teammate, a mentor, or a judge sees what this project is and whether the document is current.
+
+| | |
+|---|---|
+| **Project** | [ your project's name ] |
+| **Team / program** | [ FRC 7421 · FTC 23619 · FLL — keep the one that's yours ] |
+| **Students** | [ first names only — no last names, no contact info ] |
+| **Season** | [ e.g. 2026–2027 ] |
+| **Status** | 🟡 Planning · 🔨 Building · ✅ Working — *(delete the two that don't apply)* |
+| **Last updated** | [ YYYY-MM-DD ] — *([see what changed ↓](#-17-change-log))* |
+
+---
+
 ### A planning template for FRC / FTC / FLL student software projects
 
-> **What this is:** A fill-in-the-blanks document that helps you *think before you build*. You answer the questions, an AI assistant (Claude, ChatGPT, Copilot, etc.) helps you fill the gaps, and the finished document becomes the spec the AI uses to actually build your app, website, or tool.
+> **What this is:** A fill-in-the-blanks document that helps you *think before you build*. You answer the questions, an AI (Claude, ChatGPT, Copilot…) helps fill the gaps, and the finished document becomes the spec it builds from.
 >
-> **The golden rule:** *An AI can only build what you can clearly describe.* This document forces you to describe it clearly. A vague plan produces a vague app. A precise plan produces a working app.
+> **The golden rule:** *An AI can only build what you can clearly describe.* A vague plan produces a vague app; a precise plan produces a working one.
 >
-> **This is a LIVING document.** It must always describe the app *as it actually is right now* — not just what you planned at the start. Whenever the app changes (a feature is added, a rule changes, an idea is dropped), this document gets updated to match. The document and the app stay in sync, always. This file is the **single source of truth**: if it's not written here, it's not part of the app.
+> **This is a LIVING document.** It must describe the app *as it is right now*, not just what you planned at the start. Every time the app changes, this document changes to match. It is the **single source of truth**: if it's not written here, it's not part of the app.
 
 ---
 
 ## 📋 How to use this document
 
-1. **Start from the template repo.** This document lives in our team's GitHub *template repository*. Click **"Use this template" → "Create a new repository"** to get your own copy of this file inside a fresh repo for your project. Don't edit the master template — your work happens in *your* repo.
-2. **Fill it top to bottom.** Don't skip ahead. Each section builds on the one before it.
-3. **Use AI as a thinking partner, not an autopilot.** When you're stuck on a section, paste the section into your AI tool and ask: *"Help me think through this part. Ask me questions until you understand what I want."*
+1. **Start from the template repo.** Click **"Use this template" → "Create a new repository"** for your own copy. Don't edit the template itself — your work happens in *your* repo.
+2. **Work top to bottom.** Each section builds on the last, so go in order — even if you're only doing the five starter sections below.
+3. **Use AI as a thinking partner, not an autopilot.** Stuck? Paste the section into your AI and ask: *"Help me think through this. Ask me questions until you understand what I want."*
 4. **Mark what you finish.** Replace every `[ ... ]` placeholder. Leave `🟡 TODO` where you're still deciding.
 5. **When the doc is done, build.** Jump to the last section, *"Hand it to the AI,"* and use the ready-made prompt.
-6. **Keep it in sync as you build.** Every time you change something about the app, update the matching section here *and* add a line to the Change Log (Section 17). The AI is told to do this for you — but check that it actually did. A document that no longer matches the app is worse than no document.
+6. **Keep it in sync.** When the app changes, update the matching section *and* add a dated line to the [Change Log](#-17-change-log). The AI does this for you — **check that it did.**
+
+### 🌱 First project? Start with five sections.
+
+Seventeen sections is a lot. **You don't need them all to start.** Fill in these five and you have a real plan you can hand to an AI:
+
+**[§1 One-line summary](#-1-the-one-line-summary) · [§3 Goals & non-goals](#-3-goals-and-non-goals-scope) · [§5 User stories](#-5-what-it-should-do-user-stories) · [§6 The rules](#-6-the-rules-this-is-the-brain-of-your-app) · [§14 Build plan](#-14-build-plan-small-steps)**
+
+*What it is, what it won't be, what it does, how it thinks, and the order you'll build it.* The rest can wait — your AI can help you fill those in later. **FLL teams and first-time builders: this is your path.**
+
+---
 
 **Two levels of detail:**
-- 🟢 **CORE** — every project fills these in. If you only do the green sections, you still have a usable plan. *(Good starting point for FLL teams and first-time builders.)*
-- 🔵 **ADVANCED** — fill these in for bigger or more serious projects. *(Recommended for FTC/FRC scouting systems, team websites with logins, anything other people will rely on.)*
+- 🟢 **CORE** — every project fills these in eventually. If you do all the green sections, you have a thorough plan.
+- 🔵 **ADVANCED** — for bigger projects. *(FTC/FRC scouting systems, team websites with logins, anything other people rely on.)*
 
-> ⚠️ **One safety rule, read it first:** **Never** put secrets or personal information into this document, into a public AI chat, or into your GitHub repo. That means no passwords, no API keys (the secret codes for services like The Blue Alliance), and no personal details about teammates (full names + contact info, etc.). Once something is pushed to GitHub or pasted into a chat, treat it as public forever. If your app needs a secret key, ask a mentor how to store it safely. *(More on this in Section 11.)*
+> ⚠️ **One safety rule, read it first:** **Never** put secrets or personal information into this document, an AI chat, or your GitHub repo — no passwords, no API keys (the secret codes for services like The Blue Alliance), no teammates' full names or contact info. **Once it's pushed or pasted, treat it as public forever.** If your app needs a secret key, ask a mentor how to store it safely. *(Where secrets actually go: [`README.md`](./README.md). More on APIs: Section 11.)*
 
 ---
 ---
@@ -121,7 +145,7 @@
 
 ## 🟢 6. The rules (this is the brain of your app)
 
-*Why this matters: "Rules" are the logic that makes your app smart. They're the decisions the app makes for you. AI gets these wrong unless you spell them out.*
+*Why this matters: Rules are the decisions your app makes for you. AI gets these wrong unless you spell them out.*
 
 Write rules as **"When X happens, the app should do Y."** Be picky. Include the weird cases.
 
@@ -166,9 +190,14 @@ List the "things" your app keeps track of and what details each one has.
 
 **Where is the data stored?** (pick one to start)
 - [ ] Just on the device (simplest — good for offline tools)
-- [ ] A shared online database (needed if multiple people share data) 🔵
 - [ ] A Google Sheet / spreadsheet (easy for teams already using one)
+- [ ] A shared online database — for our team that's **Firebase** 🔵 *(needed only if several people share data live — **a mentor sets it up**)*
+- [ ] Something else? Go ahead and explore it — but **ask a mentor before you commit to it.**
 - [ ] 🟡 TODO — ask AI to recommend based on my needs
+
+> 💡 **Picked the shared database? Build on the device first anyway.** Keep *all* saving and loading in one small file (`saveMatch()`, `getMatches()`). When phones really do need to share data, **only that file changes.** Plenty of apps find they never needed the database at all.
+>
+> **Paste this to your AI:** *"Put all data saving and loading in one separate file, and make those functions `async` from the very start — even though we're only saving on the device for now — so we can swap in Firebase later without rewriting the rest of the app."* *(Device storage is instant; Firebase takes a moment. Writing it the "waiting" way from day one costs nothing and saves a painful rewrite.)*
 
 ---
 
@@ -176,7 +205,7 @@ List the "things" your app keeps track of and what details each one has.
 
 *Why this matters: Listing the screens/pages is like sketching the app before building it.*
 
-List each screen and what's on it. **Even a rough description or a phone-photo of a paper sketch helps the AI a lot.**
+List each screen and what's on it. **Even a rough description helps the AI a lot.**
 
 **Example (scouting app):**
 1. **Home screen** — buttons: "New Match Entry", "View Team Rankings".
@@ -191,12 +220,11 @@ List each screen and what's on it. **Even a rough description or a phone-photo o
 **How do users move between screens?** (the flow)
 > [e.g. Home → tap "New Entry" → Entry screen → tap Save → back to Home]
 
-> 💡 Hand-draw your screens on paper, take a photo, and give it to the AI. It can read sketches.
-
-**🎨 Already made a design in Claude Design?** Great — bring it in instead of describing it from scratch. Open your design, click **Export** (upper-right), and pick the path that fits what you're doing:
-- **Still planning here in chat?** Export a **screenshot or PDF** and attach it to your chat (or add it to the project). Reference it in this section — the AI can *see* your design and match it. *(Simplest, works for everyone.)*
-- **Ready to build it into our repo?** Choose **"Handoff to Claude Code"** — it sends the real design (components, colors, layout), not just a picture, so the code comes out much closer to your design. Or export **standalone HTML / a .zip** and drop the files into your project's `/src` folder.
-- ⚠️ Claude Design needs a paid plan and uses up usage fast, so have the person who made the design do the export, then share it with the team.
+> 🎨 **Draw your screens on paper, photograph them, hand that to the AI** — it reads sketches fine. Already designed them somewhere else (Claude Design, Figma, a drawing app)? Export an **image or PDF**, attach it to your chat, and reference it here.
+>
+> Some design tools can hand off the **real design** — components, colors, layout — to a coding AI instead of just a picture, which gets the code much closer to what you drew. Check whether yours does.
+>
+> ⚠️ **Exporting is a one-person job.** If your tool has usage limits or needs a paid plan, have **whoever made the design** export once and share the file. **Ask a mentor before signing up for anything paid.**
 
 ---
 
@@ -216,7 +244,7 @@ List each screen and what's on it. **Even a rough description or a phone-photo o
 **Our choice:**
 - **Language / framework:** [ ... or "🟡 TODO — ask AI"]
 - **Where it runs:** [ phone browser / laptop / installed app / ... ]
-- **Where it's hosted / shared:** [ GitHub Pages / a link / just on our laptop / ... ]
+- **Where it's hosted / shared:** [ **GitHub Pages** — our default / just on our laptop / something else — *ask a mentor first* ]
 - **Tools we already know:** [ ... ]
 
 > 💡 **Ask your AI:** *"I want to build [my app] and our team knows [these tools]. What's the simplest stack that an AI can help us build and that we can actually host for free?"*
@@ -325,9 +353,9 @@ Describe (or draw) the main parts and how they talk to each other.
 
 ## 📝 17. Change Log
 
-*Why this matters: This is how the document stays a living, trustworthy record. Every time the app changes, add a line here. New entries go on top. This lets anyone — a teammate, a mentor, a judge, or next year's team — see how the app grew and why.*
+*Why this matters: Every time the app changes, add a line here — newest on top. It lets a teammate, a mentor, a judge, or next year's team see how the app grew and why.*
 
-**Who writes each entry:** *Whoever makes the change records it.* When you're building with the AI, the AI writes the entry and shows you what it changed — your job is to check it. When you change something on your own (filling in a section, a scope decision in a team meeting, dropping a feature the AI never saw), you write the entry yourself.
+**Who writes each entry:** whoever made the change. Building with the AI? It writes the entry, you check it. Changed something yourself — a scope call, a dropped feature? You write it.
 
 | Date | What changed | Why | By |
 |---|---|---|---|
@@ -344,6 +372,8 @@ Describe (or draw) the main parts and how they talk to each other.
 
 Once the green sections are filled in, you're ready to build. **Copy the prompt below**, paste it into your AI tool, then paste your filled-in document right after it.
 
+> 💡 **Does your AI already have these documents?** Some setups (a Claude Project, or a coding tool working inside your repo) can already read `DESIGN.md` and `TEAM.md`. Then skip the paste and say: *"I'm building **[project name]**. You already have my `DESIGN.md` — read it, then follow the steps below."* **Not sure? Paste the whole thing** — an extra copy never hurts; a missing one does.
+
 > **Prompt to start building:**
 >
 > *"You are helping a student robotics team build software. Below is our completed software design document. Please do the following, one step at a time:*
@@ -351,7 +381,7 @@ Once the green sections are filled in, you're ready to build. **Copy the prompt 
 > 2. *Then propose the simplest tech stack that matches our skills and can be hosted for free, and wait for me to agree.*
 > 3. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
 > 4. *After each step works, we'll move to the next one together.*
-> 5. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section of the document AND add a dated line to the Change Log (Section 17). At the end of every work session, show me the updated document and point out exactly what you changed so it always describes the app as it really is.*
+> 5. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section AND add a dated line to the Change Log (Section 17). At the end of every session, show me the updated document and point out exactly what you changed.*
 > *Here is our document:"*
 >
 > *[paste your filled-in document here]*
@@ -363,7 +393,7 @@ Once the green sections are filled in, you're ready to build. **Copy the prompt 
 - *"How do I test that Step 2 actually works?"*
 - *"We just changed [X]. Update the design document and the Change Log to match, and show me what you changed."*
 
-> 🏆 **Remember:** The goal isn't just a finished app — it's that *you* understand and can explain how it works. At a FIRST event, judges (and your teammates) will ask. The student who planned it with this document will have the answer.
+> 🏆 **Remember:** The goal isn't just a finished app — it's that *you* can explain how it works. At a FIRST event, judges will ask. The student who planned it with this document will have the answer.
 
 ---
 

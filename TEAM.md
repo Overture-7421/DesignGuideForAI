@@ -1,10 +1,12 @@
 # 🤖 Team Context — Overture (FRC 7421 · FTC 23619)
 
-> **What this is:** A short, shared description of our robotics team and how we build software. Claude reads this so it doesn't have to ask the same questions every chat — it already knows our tools, our limits, and who to point students to.
+> **What this is:** A short description of our team and how we build software, so an AI doesn't have to re-ask the same questions every chat — it already knows our tools, our limits, and who to point students to.
 >
-> **Where it lives:** in our **Claude Project knowledge** (so every chat here uses it) *and* in our **GitHub template repo** (so it travels with every project). Keep it up to date — it's the team's "about us" for any AI.
+> **Where it lives:** in our **Claude Project knowledge** and in our **GitHub template repo**, so it travels with every project. Keep it up to date.
 >
-> ⚠️ This file may end up in a public repo. **No personal contact info, home addresses, or anything private.** First names / roles only.
+> ⚠️ This file may end up in a public repo. **No names, no contact info, no addresses, nothing private.** Describe people by *role* ("a software mentor"), never by name.
+>
+> **Another team?** You're welcome to use this template. Replace this file with your own team's details — and keep it name-free like this one.
 
 ---
 
@@ -15,8 +17,7 @@
   - **FTC** — Team **23619**
   - **FLL** — number changes each season
 - **Who's on the team:** students from ~9-year-old FLL members up to high-school FRC members. **Always match the explanation to the person.**
-- **Based at:** [school / city — keep it general] 🟡 TODO
-- **Current season / year:** [ e.g. 2026–2027 ] 🟡 TODO
+- **Season:** changes every year. If it matters for a project, ask the student which season they're building for.
 
 ## 🛠️ What we build (software)
 The kinds of software projects our students take on:
@@ -28,24 +29,29 @@ The kinds of software projects our students take on:
 ## 🧠 What we know (skills & tools)
 - **Overall level: ALWAYS ASSUME BEGINNERS. Always.** Explain everything from scratch, define every piece of jargon, and never assume prior coding knowledge — no matter who's asking.
 - **Tools we already use:** GitHub, VS Code, and WPILib (for robot code).
-- Because we start from beginners, prefer the **simplest possible tech** that gets the job done and that a beginner can understand and explain.
+- **But don't assume they know Git.** Most students meet GitHub for the first time here — explain as you go, and point them to `GIT-BASICS.md`.
+- Prefer the **simplest possible tech** that does the job and that a beginner can understand and explain.
 
 ## 📦 Where our stuff lives
-- **Code:** GitHub — [our org/username, e.g. github.com/overture7421] 🟡 TODO
-- **New projects start from:** [our template repo link] 🟡 TODO
+- **Code:** GitHub — **github.com/Overture-7421**
+- **New projects start from:** our template repo — **github.com/Overture-7421/DesignGuideForAI** → click **"Use this template" → "Create a new repository."**
 - **Domain:** the team owns a domain, but **a mentor manages it** — ask a mentor before pointing anything at it.
 
 ## ☁️ Hosting
-- **Not finalized yet.** A likely option is **Firebase** (has a free tier, can host a web app and store data). Confirm with a mentor before setting anything up. When it's decided, record it here and in the project's own `DESIGN.md`.
+- **Default: GitHub Pages.** We're already on GitHub, it's free, and a plain website (HTML/CSS/JS) goes live just by pushing. Start here for almost every project.
+- **Need phones to share live data?** Add **Firebase** — the upgrade, not the starting point. Firebase stores shared data; Pages hosts the app. Different jobs; you'll often use both.
+- **Firebase setup is a mentor job.** Projects are owned by the **team account**, which grants access to student accounts. A mentor does the setup, so nobody hits billing surprises.
+- **Want something different?** Another host, or Firebase *just* for hosting (no database) because a library needs it — fine to explore. **Ask a mentor first**, then record it in `DESIGN.md` (Section 9).
+- 💡 **You can build and test before any Firebase project exists** — see `DESIGN.md` Section 7. Never let "we need Firebase" stop you from starting.
 
 ## 💻 Devices
-- Students and mentors use their **own phones and their own laptops** (all different kinds — no guaranteed shared team devices).
-- **What this means for our apps:** build things that run in a **normal web browser** on a phone or laptop. That's the safest target when everyone's on different hardware.
+- Everyone uses their **own phone and laptop** — all different kinds, no shared team devices.
+- **So:** build things that run in a **normal web browser** on a phone or laptop. Safest target when everyone's on different hardware.
 
 ## 📶 Internet at competitions
-- **Usually unreliable.** Venue Wi-Fi at FRC/FTC events is typically crowded or spotty.
-- **Default rule:** anything used *in the stands* (like a scouting app) should be built to **work offline**.
-- **But it doesn't matter for every project** — a mentor app or a dashboard running on a laptop might be perfectly fine online. So **ask the student whether offline actually matters for their specific app** before assuming; don't force offline on a project that doesn't need it.
+- **Usually unreliable.** Venue Wi-Fi at FRC/FTC events is crowded or spotty.
+- **Default rule:** anything used *in the stands* (like a scouting app) should **work offline**.
+- **But not every project needs it** — a mentor app or a laptop dashboard is fine online. **Ask the student whether offline actually matters** before assuming; don't force it on a project that doesn't need it.
 
 ## 🤝 How we work with AI
 - **Plan first:** every software project starts by filling in `DESIGN.md` — no code until the plan is clear.
@@ -54,15 +60,15 @@ The kinds of software projects our students take on:
 - **Keep `DESIGN.md` in sync:** when the app changes, update the matching section and add a dated line to its Change Log.
 
 ## 🙋 Who to ask
-- **Software help:** [mentor first name / role — how students reach them at meetings] 🟡 TODO
+- **Software help:** ask a software mentor at a team meeting. *(No names in this file — it's public.)*
 - **Domain, secrets & API keys:** a mentor manages these. **Never** put real keys, passwords, or teammates' personal info in code, chats, or the repo — ask a mentor to store them safely.
 
 ## 📖 Team words (glossary)
-*Terms specific to us or to FIRST that a new member — or the AI — might not know:*
+*Terms a new member — or the AI — might not know:*
 - **FRC / FTC / FLL** — the three FIRST robotics programs our team competes in (oldest/most advanced to youngest).
 - **Scouting** — watching and recording what other teams' robots do, to help pick alliance partners.
 - **Auto / Teleop** — the autonomous (pre-programmed) and driver-controlled parts of a match.
 - [ add your own... ]
 
 ---
-*Last updated: 2026-07-04*
+*Last updated: 2026-07-25*
