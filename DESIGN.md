@@ -26,19 +26,19 @@
 ## 📋 How to use this document
 
 1. **Work in your own copy, not the template.** If you haven't made one yet, [`GIT-BASICS.md`](./GIT-BASICS.md) walks you through it.
-2. **Work top to bottom.** Each section builds on the last, so go in order — even if you're only doing the five starter sections below.
-3. **Use AI as a thinking partner, not an autopilot.** Stuck? Paste the section into your AI and ask: *"Help me think through this. Ask me questions until you understand what I want."*
+2. **Work top to bottom.** Each section builds on the last, so go in order — even if you're only doing the six starter sections below.
+3. **Use AI as a thinking partner, not an autopilot.** Stuck? Paste the section into your AI and ask: *"Help me think through this. Ask me questions until you understand what I want."* **You draft, the AI attacks it** — never the other way round. [`THINKING.md`](./THINKING.md) explains why, and how to find answers that aren't in your head yet.
 4. **Mark what you finish.** Replace every `[ ... ]` placeholder. Leave `🟡 TODO` where you're still deciding.
 5. **When the doc is done, build.** Jump to the last section, *"Hand it to the AI,"* and use the ready-made prompt.
 6. **Keep it in sync.** The AI updates this document for you — **check that it actually did.**
 
-### 🌱 First project? Start with five sections.
+### 🌱 First project? Start with six sections.
 
-Seventeen sections is a lot. **You don't need them all to start.** Fill in these five and you have a real plan you can hand to an AI:
+Seventeen sections is a lot. **You don't need them all to start.** Fill in these six and you have a real plan you can hand to an AI:
 
-**[§1 One-line summary](#-1-the-one-line-summary) · [§3 Goals & non-goals](#-3-goals-and-non-goals-scope) · [§5 User stories](#-5-what-it-should-do-user-stories) · [§6 The rules](#-6-the-rules-this-is-the-brain-of-your-app) · [§14 Build plan](#-14-build-plan-small-steps)**
+**[§1 One-line summary](#-1-the-one-line-summary) · [§2 The problem](#-2-the-problem--the-objective) · [§3 Goals & non-goals](#-3-goals-and-non-goals-scope) · [§5 User stories](#-5-what-it-should-do-user-stories) · [§6 The rules](#-6-the-rules-this-is-the-brain-of-your-app) · [§14 Build plan](#-14-build-plan-small-steps)**
 
-*What it is, what it won't be, what it does, how it thinks, and the order you'll build it.* The rest can wait — your AI can help you fill those in later. **FLL teams and first-time builders: this is your path.**
+*What it is, what problem it solves, what it won't be, what it does, how it thinks, and the order you'll build it.* The rest can wait — your AI can help you fill those in later. **FLL teams and first-time builders: this is your path.**
 
 ---
 
@@ -167,7 +167,9 @@ Write rules as **"When X happens, the app should do Y."** Be picky. Include the 
 - What if there's no internet? → [ ... ]
 - What if [ ... ]? → [ ... ]
 
-> 💡 **Ask your AI:** *"Here are my rules. What edge cases am I forgetting?"* AI is great at spotting holes in logic.
+> 💡 **Ask your AI:** *"Here are my rules. What edge cases am I forgetting? Just list the holes — don't fix them."* AI is great at spotting holes in logic, once *you've* written the logic.
+>
+> 🔍 **Struggling to fill this in?** That usually means the answers aren't in your head yet — they're out with the people who'll use the app. [`THINKING.md`](./THINKING.md) has the "what if it's empty / huge / doubled / interrupted" sweep that produces most of this list for you.
 
 ---
 
@@ -254,7 +256,7 @@ List each screen and what's on it. **Even a rough description helps the AI a lot
 - **Approved by a mentor:** [ ☐ not yet · ✅ on YYYY-MM-DD ]
 - **Live link:** [ ... once it exists ]
 
-> 💡 **Ask your AI:** *"I want to build [my app] and our team knows [these tools]. What's the simplest stack an AI can help us build that runs straight from a folder on a laptop, needs no build step, and doesn't tie us to any particular web host?"*
+> 💡 **Guess first, then ask.** Pick something from the table above, then: *"I'm thinking **[my choice]** for **[my app]**, because **[my reason]**. Our team knows **[these tools]**. What am I not considering? Is there a simpler option, and what would my choice cost us later?"* *(Our requirements either way: runs from a folder on a laptop, no build step, not tied to any web host.)*
 
 ---
 
@@ -303,7 +305,9 @@ Describe (or draw) the main parts and how they talk to each other.
 - [ ] [e.g. Submit an empty form — does it warn me?]
 - [ ] [e.g. Turn off wifi — does it still save?]
 
-> 💡 **Ask your AI:** *"Write a test checklist for this app based on my rules and success criteria."*
+> 💡 **Write your checklist first, *then* ask your AI:** *"Here are my success criteria and tests. What did I miss? What would you try to break? Don't rewrite my list — tell me what's wrong with it."*
+>
+> ⚠️ **The order matters here more than anywhere else.** If the AI writes this checklist, it's testing what *it* assumed you wanted — and you'd never find out where its assumptions differ from yours. Finding that gap is the entire job of this section.
 
 ---
 
@@ -325,13 +329,15 @@ Describe (or draw) the main parts and how they talk to each other.
 
 *Why this matters: Build in small, working pieces. A working tiny app beats a half-finished big one.*
 
-| Step | What we'll have working | Done? |
-|---|---|---|
-| 1 | [The smallest version that does ONE useful thing — your ⭐ feature] | ⬜ |
-| 2 | [Add the next most important feature] | ⬜ |
-| 3 | [ ... ] | ⬜ |
-| 4 | [ ... ] | ⬜ |
-| 5 | [Polish: make it look nice, test edge cases] | ⬜ |
+| Step | What we'll have working | Works? | I can explain it? |
+|---|---|---|---|
+| 1 | [The smallest version that does ONE useful thing — your ⭐ feature] | ⬜ | ⬜ |
+| 2 | [Add the next most important feature] | ⬜ | ⬜ |
+| 3 | [ ... ] | ⬜ | ⬜ |
+| 4 | [ ... ] | ⬜ | ⬜ |
+| 5 | [Polish: make it look nice, test edge cases] | ⬜ | ⬜ |
+
+> ✋ **Two boxes, not one — and the second one is the point.** A step isn't finished because it runs. It's finished when you could sit down with a teammate, or a judge, and walk them through what that code does and why it's written that way. Can't yet? Ask the AI to explain it differently until you can, *then* tick the box. Leaving a trail of code you can't explain is how a project stops being yours.
 
 > 💡 The "minimum first version" is whatever lets a real person do the #1 task. Build *that*, test it with a teammate, then grow.
 >
@@ -377,9 +383,27 @@ Describe (or draw) the main parts and how they talk to each other.
 ---
 ---
 
+# 🛑 First — can you defend the plan?
+
+**A filled-in document is not the same as a plan you understand.** Before you build anything, answer these **out loud, without reading**, to a teammate or a mentor. They're the questions a judge asks anyway.
+
+- **Say what you're building in one sentence** — without looking at Section 1.
+- **Name one thing you decided NOT to build, and why.** *(Nothing comes to mind? Then your scope isn't decided yet — go back to Section 3.)*
+- **Who is the one main user?** What do they do today instead, and what's bad about it?
+- **Pick any rule from Section 6 and explain why it's that way** — not what it says, *why you chose it*.
+- **What happens when two people do the same thing at once?** "We'll deal with that later" means you have a missing requirement, not a small detail.
+- **What's the first thing you'd cut** if you lost a week before competition?
+- **Point at the part you're least sure about.** Everyone has one — not knowing which is the warning sign.
+
+**Stuck on any of them?** Good — the document just found a hole *before* you built on top of it. That's the cheapest a hole will ever be. Go fix that section; [`THINKING.md`](./THINKING.md) has ways to dig out answers that aren't in your head yet.
+
+> 🧑‍🏫 **The best version of this takes ten minutes:** hand `DESIGN.md` to a mentor or a teammate who's never read it and let them ask. If they can't tell you what the app does afterwards, the answer belongs in the document — not in your head.
+
+---
+
 # 🚀 HAND IT TO THE AI
 
-Once the green sections are filled in, you're ready to build. **Copy the prompt below**, paste it into your AI tool, then paste your filled-in document right after it.
+Once the green sections are filled in **and you can answer the questions above**, you're ready to build. **Copy the prompt below**, paste it into your AI tool, then paste your filled-in document right after it.
 
 > 💡 **Does your AI already have these documents?** Some setups (a Claude Project, or a coding tool working inside your repo) can already read `DESIGN.md` and `TEAM.md`. Then skip the paste and say: *"I'm building **[project name]**. You already have my `DESIGN.md` — read it, then follow the steps below."* **Not sure? Paste the whole thing** — an extra copy never hurts; a missing one does.
 
@@ -387,11 +411,12 @@ Once the green sections are filled in, you're ready to build. **Copy the prompt 
 >
 > *"You are helping a student robotics team build software. Below is our completed software design document. Please do the following, one step at a time:*
 > 1. *First, read the whole thing and ask me about anything that is unclear, contradictory, or missing — especially in the Rules and Edge Cases sections. Don't write code yet.*
-> 2. *Then propose the simplest tech stack that matches our skills. It must run straight from a folder on a laptop with **no build step**, and must **not assume any particular web host or online database** — hosting is a separate decision our mentors make later, and our app has to work without one. Wait for me to agree before continuing.*
-> 3. ***Keep it portable the whole way through:** use relative paths (`./file.css`, never `/file.css`), never hardcode a website address, and keep all data saving and loading in one separate file with `async` functions. I must always be able to open the app from a plain folder on my laptop and have it work.*
-> 4. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
-> 5. *After each step works, we'll move to the next one together.*
-> 6. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section AND add a dated line to the Change Log (Section 17). At the end of every session, show me the updated document and point out exactly what you changed.*
+> 2. ***Never invent a requirement.** If something isn't written in this document, you don't know it — ask me instead of assuming or picking something sensible. If I answer vaguely ("fast", "simple", "handle errors"), keep asking until it's specific enough to test. When there's a real choice to make, show me the options and what each one costs, and let **me** decide — even when one is obviously better. I'm here to learn to make these calls.*
+> 3. *Then propose the simplest tech stack that matches our skills. It must run straight from a folder on a laptop with **no build step**, and must **not assume any particular web host or online database** — hosting is a separate decision our mentors make later, and our app has to work without one. Wait for me to agree before continuing.*
+> 4. ***Keep it portable the whole way through:** use relative paths (`./file.css`, never `/file.css`), never hardcode a website address, and keep all data saving and loading in one separate file with `async` functions. I must always be able to open the app from a plain folder on my laptop and have it work.*
+> 5. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
+> 6. *After each step works, **ask me to explain back what the code does** before we move on. If I can't, explain it a different way and ask again — I have to be able to defend this project to a judge. Then we move to the next step together.*
+> 7. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section AND add a dated line to the Change Log (Section 17). At the end of every session, show me the updated document and point out exactly what you changed.*
 > *Here is our document:"*
 >
 > *[paste your filled-in document here]*
