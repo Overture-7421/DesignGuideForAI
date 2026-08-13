@@ -24,6 +24,7 @@
 | `README.md` | This file — the front page of your project. Update the title and one-liner above. |
 | `TEAM.md` | Our team's context for the AI — our tools, our limits, who to ask. You usually don't need to change this. |
 | `GIT-BASICS.md` | **New to GitHub?** How to save your work so you never lose it. One page. |
+| `DEPLOY.md` | **Running it & getting it online.** How to demo on your laptop, how to keep your app portable, and how hosting gets approved. |
 | `.gitignore` | Lists files Git should ignore — **including anything with secrets.** |
 | `LICENSE` | The rules for reusing this (MIT — basically "use it, keep the credit line"). |
 
@@ -53,17 +54,21 @@ Some apps need **secret keys** — an API key for The Blue Alliance or Statbotic
 - ✅ Keep real secrets in a file that Git ignores (the `.gitignore` already lists common ones).
 - 🧑‍🏫 If you're unsure, **ask a mentor before pushing.** It's much easier to keep a secret out than to remove one after it's public.
 
+> ⚠️ **A key inside your app's code is not hidden.** Anyone who opens a web app can read the JavaScript in it — that's how browsers work. "It's not in a file called `secrets`" doesn't help. If your app needs a key to talk to a service, that's a mentor conversation, not something to solve yourself.
+
 > 😬 **Already committed something you shouldn't have?** Deleting it in your next save does *not* remove it — Git keeps the old version. Tell a mentor today; see [`GIT-BASICS.md`](./GIT-BASICS.md). Nobody's in trouble, but it needs fixing fast.
 
 ---
 
 ## ▶️ Running & sharing this project
 
+**You run this on your own laptop** — that's how student projects get demoed here, judges included. Putting an app **online is a mentor's decision**, so talk to one before hosting anything. Details, plus the rules that keep your app ready for either: [`DEPLOY.md`](./DEPLOY.md).
+
 *(Fill this in as you build — the AI can help you write it.)*
 
 - **To run it locally:** [ ... e.g. "open `src/index.html` in a browser" ]
-- **Where it's hosted / shared:** [ ... e.g. a GitHub Pages link ]
-- **Who can use it:** [ ... ]
+- **Who it's for:** [ ... ]
+- **Hosting:** [ not hosted — runs on a laptop *(normal)* · approved by a mentor on YYYY-MM-DD → link ]
 
 ---
 

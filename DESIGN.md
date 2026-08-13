@@ -191,13 +191,13 @@ List the "things" your app keeps track of and what details each one has.
 **Where is the data stored?** (pick one to start)
 - [ ] Just on the device (simplest — good for offline tools)
 - [ ] A Google Sheet / spreadsheet (easy for teams already using one)
-- [ ] A shared online database — for our team that's **Firebase** 🔵 *(needed only if several people share data live — **a mentor sets it up**)*
+- [ ] A shared online database 🔵 *(needed only if several people share data live — **which one is a mentor decision**, and a mentor sets it up; see `TEAM.md`)*
 - [ ] Something else? Go ahead and explore it — but **ask a mentor before you commit to it.**
 - [ ] 🟡 TODO — ask AI to recommend based on my needs
 
-> 💡 **Picked the shared database? Build on the device first anyway.** Keep *all* saving and loading in one small file (`saveMatch()`, `getMatches()`). When phones really do need to share data, **only that file changes.** Plenty of apps find they never needed the database at all.
+> 💡 **Think you need a shared database? Build on the device first anyway.** Keep *all* saving and loading in one small file (`saveMatch()`, `getMatches()`). When phones really do need to share data, **only that file changes.** Plenty of apps find they never needed the database at all.
 >
-> **Paste this to your AI:** *"Put all data saving and loading in one separate file, and make those functions `async` from the very start — even though we're only saving on the device for now — so we can swap in Firebase later without rewriting the rest of the app."* *(Device storage is instant; Firebase takes a moment. Writing it the "waiting" way from day one costs nothing and saves a painful rewrite.)*
+> **Paste this to your AI:** *"Put all data saving and loading in one separate file, and make those functions `async` from the very start — even though we're only saving on the device for now — so we can swap in a shared database later without rewriting the rest of the app."* *(Device storage is instant; anything over a network takes a moment. Writing it the "waiting" way from day one costs nothing, saves a painful rewrite, and works the same whichever database we end up approved for.)*
 
 ---
 
@@ -236,18 +236,25 @@ List each screen and what's on it. **Even a rough description helps the AI a lot
 
 | You want to build... | Good beginner choice | Notes |
 |---|---|---|
-| A website / web app (works on any phone/laptop) | **HTML + CSS + JavaScript**, or **React** | Easiest to share — just send a link. Best default for scouting apps. |
+| A website / web app (works on any phone/laptop) | **HTML + CSS + JavaScript** | **Best default.** No build step — the file you edit is the file that runs, so it opens straight from a folder and can go anywhere later. Right choice for most scouting apps. |
+| The same, but much bigger 🔵 | **React** | More power, but it needs a **build step**, which limits where the app can go. **Ask a mentor before choosing it.** |
 | A phone app you install | A web app first, then wrap it | Real native apps are harder; start with a web app. |
-| A robot dashboard / data tool | **Python** | Pairs well with robot code. |
+| A robot dashboard / data tool | **Python** | Pairs well with robot code. Runs on a laptop — simple web hosts **can't run Python**, so plan on it staying a laptop tool. |
 | Quick data crunching | **Python** or a **Google Sheet + scripts** | |
 
 **Our choice:**
 - **Language / framework:** [ ... or "🟡 TODO — ask AI"]
 - **Where it runs:** [ phone browser / laptop / installed app / ... ]
-- **Where it's hosted / shared:** [ **GitHub Pages** — our default / just on our laptop / something else — *ask a mentor first* ]
+- **Does it need a build step?** [ no — opens straight from a folder / yes — *talk to a mentor* ]
 - **Tools we already know:** [ ... ]
 
-> 💡 **Ask your AI:** *"I want to build [my app] and our team knows [these tools]. What's the simplest stack that an AI can help us build and that we can actually host for free?"*
+**Hosting** — *leave this alone until a mentor approves one. Running on your laptop is the normal state; see [`DEPLOY.md`](./DEPLOY.md).*
+- **Runs locally for now:** ✅ *(normal — most projects stay here)*
+- **Host proposed:** [ 🟡 not yet ]
+- **Approved by a mentor:** [ ☐ not yet · ✅ on YYYY-MM-DD ]
+- **Live link:** [ ... once it exists ]
+
+> 💡 **Ask your AI:** *"I want to build [my app] and our team knows [these tools]. What's the simplest stack an AI can help us build that runs straight from a folder on a laptop, needs no build step, and doesn't tie us to any particular web host?"*
 
 ---
 
@@ -327,6 +334,8 @@ Describe (or draw) the main parts and how they talk to each other.
 | 5 | [Polish: make it look nice, test edge cases] | ⬜ |
 
 > 💡 The "minimum first version" is whatever lets a real person do the #1 task. Build *that*, test it with a teammate, then grow.
+>
+> 🌐 **Think you'll need hosting?** Start that conversation with a mentor **early** — around Step 2, not the week before competition. Approval and setup take real time, and discovering late that your app can't be hosted the way you assumed makes for a bad week. Keep building meanwhile; hosting should never block you. See [`DEPLOY.md`](./DEPLOY.md).
 
 ---
 
@@ -378,10 +387,11 @@ Once the green sections are filled in, you're ready to build. **Copy the prompt 
 >
 > *"You are helping a student robotics team build software. Below is our completed software design document. Please do the following, one step at a time:*
 > 1. *First, read the whole thing and ask me about anything that is unclear, contradictory, or missing — especially in the Rules and Edge Cases sections. Don't write code yet.*
-> 2. *Then propose the simplest tech stack that matches our skills and can be hosted for free, and wait for me to agree.*
-> 3. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
-> 4. *After each step works, we'll move to the next one together.*
-> 5. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section AND add a dated line to the Change Log (Section 17). At the end of every session, show me the updated document and point out exactly what you changed.*
+> 2. *Then propose the simplest tech stack that matches our skills. It must run straight from a folder on a laptop with **no build step**, and must **not assume any particular web host or online database** — hosting is a separate decision our mentors make later, and our app has to work without one. Wait for me to agree before continuing.*
+> 3. ***Keep it portable the whole way through:** use relative paths (`./file.css`, never `/file.css`), never hardcode a website address, and keep all data saving and loading in one separate file with `async` functions. I must always be able to open the app from a plain folder on my laptop and have it work.*
+> 4. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
+> 5. *After each step works, we'll move to the next one together.*
+> 6. ***Keep our design document up to date.** Treat it as the single source of truth. Any time we add, change, or remove a feature, rule, screen, data field, or tech choice, update the matching section AND add a dated line to the Change Log (Section 17). At the end of every session, show me the updated document and point out exactly what you changed.*
 > *Here is our document:"*
 >
 > *[paste your filled-in document here]*
@@ -391,6 +401,7 @@ Once the green sections are filled in, you're ready to build. **Copy the prompt 
 - *"Why did you choose to do it this way?"*
 - *"Here's an error I got: [paste it]. What does it mean and how do I fix it?"*
 - *"How do I test that Step 2 actually works?"*
+- *"Does anything in this code assume where it's hosted? Check for hardcoded addresses and paths starting with `/`."*
 - *"We just changed [X]. Update the design document and the Change Log to match, and show me what you changed."*
 
 > 🏆 **Remember:** The goal isn't just a finished app — it's that *you* can explain how it works. At a FIRST event, judges will ask. The student who planned it with this document will have the answer.
