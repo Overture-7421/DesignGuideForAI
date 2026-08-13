@@ -41,7 +41,7 @@ Fill in DESIGN.md  ─►  Hand it to the AI  ─►  Build one small step
        └──────  Update DESIGN.md + Change Log  ◄──  It works! Test it
 ```
 
-The loop never ends: every change to the app loops back into the document. That's what keeps the plan trustworthy all the way to competition — and lets next year's team understand what you built.
+The loop never ends — and that's the point. A plan that stayed accurate all season is what lets a judge, a mentor, or next year's team understand what you built.
 
 ---
 

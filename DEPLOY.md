@@ -54,7 +54,7 @@ That leading `/` means "the very top of the website" — which is your whole har
 
 **3. Keep all saving and loading in one file.** All of it — `saveMatch()`, `getMatches()`. Make them `async` from the very start, even while you're only saving on the device. If the team ever moves to a shared database, **only that one file changes.** *(This is the same advice as `DESIGN.md` Section 7 — it matters that much.)*
 
-**4. Keep settings and keys in one separate file that Git ignores.** Then pointing your app at something new is a settings change, not a code change. And never commit real keys — see `README.md`.
+**4. Keep settings and keys in one separate file, named `config.secret.js`.** Then pointing your app at something new is a settings change, not a code change. **Use that exact name** — our `.gitignore` already knows to keep `config.secret.*` out of GitHub, and a file called `config.js` would get committed like any other. Never put real keys anywhere else; see `README.md`.
 
 **5. Avoid a build step if you can.** A "build step" is a command you must run to turn your code into the thing people actually open. Plain HTML/CSS/JS needs none — the file you edit is the file that runs. Tools like React do need one, which limits where the app can go. **Not forbidden — just ask a mentor before choosing one.**
 

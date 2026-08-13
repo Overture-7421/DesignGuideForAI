@@ -35,12 +35,12 @@ The kinds of software projects our students take on:
 ## 📦 Where our stuff lives
 - **Code:** GitHub — **github.com/Overture-7421**
 - **New projects start from:** our template repo — **github.com/Overture-7421/DesignGuideForAI** → click **"Use this template" → "Create a new repository."**
-- **Domain:** the team owns a domain, but **a mentor manages it** — ask a mentor before pointing anything at it.
 
 ## ☁️ Hosting & deployment
 - **Nothing goes online without a mentor.** Hosting means accounts, sometimes billing, and a public address — adult decisions. Students demo by **running the app on their own laptop**; that's the normal way a project gets shown here, judges included.
 - **The decision is a conversation, not a default.** A student proposes a host, or a mentor proposes one — either direction. **We have no house default:** GitHub Pages, Firebase, Supabase, a mentor-run server — each fits some projects and not others, and the right answer depends on what the app actually needs. That's why the conversation happens *after* you know what you built.
 - **A mentor does the setup, under the team account.** Team-owned projects grant access to student accounts, so nobody hits a billing surprise and nothing important ends up stranded on a graduating senior's personal login.
+- **The team domain is a mentor's call too.** We own one, but a mentor manages it — ask before pointing anything at it.
 - **Build so the answer doesn't matter.** Every app should run from a plain folder on a laptop and work anywhere it's later put — relative paths, no hardcoded addresses, all saving/loading in one file. The rules are short and free if you follow them from day one: see `DEPLOY.md`.
 - **Record the outcome** in `DESIGN.md` (Section 9): which host, who approved it, and the live link.
 - 💡 **Never wait on hosting to start building.** A complete app can be built, tested, and demoed before anyone picks a host. Most projects need the conversation late; plenty never need it at all.

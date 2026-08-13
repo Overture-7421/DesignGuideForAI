@@ -25,12 +25,12 @@
 
 ## 📋 How to use this document
 
-1. **Start from the template repo.** Click **"Use this template" → "Create a new repository"** for your own copy. Don't edit the template itself — your work happens in *your* repo.
+1. **Work in your own copy, not the template.** If you haven't made one yet, [`GIT-BASICS.md`](./GIT-BASICS.md) walks you through it.
 2. **Work top to bottom.** Each section builds on the last, so go in order — even if you're only doing the five starter sections below.
 3. **Use AI as a thinking partner, not an autopilot.** Stuck? Paste the section into your AI and ask: *"Help me think through this. Ask me questions until you understand what I want."*
 4. **Mark what you finish.** Replace every `[ ... ]` placeholder. Leave `🟡 TODO` where you're still deciding.
 5. **When the doc is done, build.** Jump to the last section, *"Hand it to the AI,"* and use the ready-made prompt.
-6. **Keep it in sync.** When the app changes, update the matching section *and* add a dated line to the [Change Log](#-17-change-log). The AI does this for you — **check that it did.**
+6. **Keep it in sync.** The AI updates this document for you — **check that it actually did.**
 
 ### 🌱 First project? Start with five sections.
 
@@ -46,7 +46,7 @@ Seventeen sections is a lot. **You don't need them all to start.** Fill in these
 - 🟢 **CORE** — every project fills these in eventually. If you do all the green sections, you have a thorough plan.
 - 🔵 **ADVANCED** — for bigger projects. *(FTC/FRC scouting systems, team websites with logins, anything other people rely on.)*
 
-> ⚠️ **One safety rule, read it first:** **Never** put secrets or personal information into this document, an AI chat, or your GitHub repo — no passwords, no API keys (the secret codes for services like The Blue Alliance), no teammates' full names or contact info. **Once it's pushed or pasted, treat it as public forever.** If your app needs a secret key, ask a mentor how to store it safely. *(Where secrets actually go: [`README.md`](./README.md). More on APIs: Section 11.)*
+> ⚠️ **One safety rule, read it first:** **Never** put secrets or personal information in this document, an AI chat, or your repo — no passwords, no API keys, no teammates' full names or contact info. **Once it's pushed or pasted, treat it as public forever.** *(The full rules, and what to do if it happens anyway: [`README.md`](./README.md).)*
 
 ---
 ---
@@ -282,7 +282,7 @@ Describe (or draw) the main parts and how they talk to each other.
 - **[Service name]** — used for [ ... ] — link to its docs: [ ... ]
 - [ ... ]
 
-> ⚠️ **Security note:** Some services need a secret "API key." **Never** paste real keys, passwords, or personal info into a public AI chat or a public GitHub repo. Ask an adult mentor how to keep secrets safe.
+> ⚠️ **Does one of these need an API key?** That's a secret — it never goes in your code, your repo, or an AI chat. **Ask a mentor to set it up.** *(See [`README.md`](./README.md).)*
 
 ---
 
