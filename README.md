@@ -10,8 +10,8 @@
 
 > 🌳 **Never used GitHub before?** Read [`GIT-BASICS.md`](./GIT-BASICS.md) first — one page, and it's how you get this project onto your laptop without losing work later.
 
-1. **📄 Open [`DESIGN.md`](./DESIGN.md) and fill it in.** This is the plan for your app — what you're building, who it's for, the rules, the data. *Don't write any code yet.* A clear plan is the difference between an app that works and one that doesn't.
-2. **🤖 Hand the plan to an AI and build step by step.** The ready-made prompt is at the bottom of `DESIGN.md`. It tells the AI to ask you questions, build the smallest working version first, and teach you as it goes.
+1. **📄 Open [`DESIGN.md`](./DESIGN.md) and fill it in.** This is the plan for your app — what you're building, who it's for, the rules, the data. *Don't write any code yet.* A clear plan is the difference between an app that works and one that doesn't. **Don't know the answers yet?** That's normal, and [`THINKING.md`](./THINKING.md) is how you go find them — they're usually out with the people who'll use the app, not in your head.
+2. **🤖 Hand the plan to an AI and build step by step.** The ready-made prompt is at the bottom of `DESIGN.md`. It tells the AI to question you, build the smallest working version first, refuse to guess at anything you left vague, and teach you as it goes.
 3. **🔄 Keep `DESIGN.md` in sync.** When the app changes, the document changes too, plus a line in its Change Log. **`DESIGN.md` is the single source of truth:** if it's not written there, it's not part of the app.
 
 ---
@@ -23,24 +23,29 @@
 | `DESIGN.md` | **Start here.** Your living plan + the AI build prompt. Always kept up to date. |
 | `README.md` | This file — the front page of your project. Update the title and one-liner above. |
 | `TEAM.md` | Our team's context for the AI — our tools, our limits, who to ask. You usually don't need to change this. |
+| `THINKING.md` | **How to work out what to build** — watching, asking, and stress-testing your ideas before any code exists. |
 | `GIT-BASICS.md` | **New to GitHub?** How to save your work so you never lose it. One page. |
+| `DEPLOY.md` | **Running it & getting it online.** How to demo on your laptop, how to keep your app portable, and how hosting gets approved. |
 | `.gitignore` | Lists files Git should ignore — **including anything with secrets.** |
 | `LICENSE` | The rules for reusing this (MIT — basically "use it, keep the credit line"). |
 
-> 💡 **There's no code folder yet — that's normal.** You don't have one until you start building. When you get there, the AI will create it for you (usually called `/src`).
+> 💡 **There's no code folder yet — that's normal.** You don't have one until you start building. When you get there, you and the AI will make one together (usually called `/src`).
 
 ---
 
 ## 🔄 The workflow: plan → build → keep in sync
 
 ```
-Fill in DESIGN.md  ─►  Hand it to the AI  ─►  Build one small step
-       ▲                                              │
-       │                                              ▼
-       └──────  Update DESIGN.md + Change Log  ◄──  It works! Test it
+Fill in DESIGN.md ─► Defend the plan ─► Hand it to the AI ─► Build ONE small step
+       ▲              (out loud, to                                   │
+       │               a real person)                                 ▼
+       │                                                     Does it work — and
+       └──── Update DESIGN.md + Change Log ◄──────────────  can I explain it?
 ```
 
-The loop never ends: every change to the app loops back into the document. That's what keeps the plan trustworthy all the way to competition — and lets next year's team understand what you built.
+**The two middle-ish steps are the ones people skip.** *Defend the plan* catches the wrong app before you build it. *Can I explain it?* catches code that works but isn't really yours. Skip both and you get a project that runs and that nobody on your team understands — the most common way an AI-built project fails.
+
+The loop never ends — and that's the point. A plan that stayed accurate all season is what lets a judge, a mentor, or next year's team understand what you built.
 
 ---
 
@@ -53,17 +58,21 @@ Some apps need **secret keys** — an API key for The Blue Alliance or Statbotic
 - ✅ Keep real secrets in a file that Git ignores (the `.gitignore` already lists common ones).
 - 🧑‍🏫 If you're unsure, **ask a mentor before pushing.** It's much easier to keep a secret out than to remove one after it's public.
 
+> ⚠️ **A key inside your app's code is not hidden.** Anyone who opens a web app can read the JavaScript in it — that's how browsers work. "It's not in a file called `secrets`" doesn't help. If your app needs a key to talk to a service, that's a mentor conversation, not something to solve yourself.
+
 > 😬 **Already committed something you shouldn't have?** Deleting it in your next save does *not* remove it — Git keeps the old version. Tell a mentor today; see [`GIT-BASICS.md`](./GIT-BASICS.md). Nobody's in trouble, but it needs fixing fast.
 
 ---
 
 ## ▶️ Running & sharing this project
 
+**You run this on your own laptop** — that's how student projects get demoed here, judges included. Putting an app **online is a mentor's decision**, so talk to one before hosting anything. Details, plus the rules that keep your app ready for either: [`DEPLOY.md`](./DEPLOY.md).
+
 *(Fill this in as you build — the AI can help you write it.)*
 
 - **To run it locally:** [ ... e.g. "open `src/index.html` in a browser" ]
-- **Where it's hosted / shared:** [ ... e.g. a GitHub Pages link ]
-- **Who can use it:** [ ... ]
+- **Who it's for:** [ ... ]
+- **Hosting:** [ not hosted — runs on a laptop *(normal)* · approved by a mentor on YYYY-MM-DD → link ]
 
 ---
 
