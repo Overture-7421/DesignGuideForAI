@@ -8,7 +8,7 @@
 | **Team / program** | [ FRC 7421 · FTC 23619 · FLL — keep the one that's yours ] |
 | **Students** | [ first names only — no last names, no contact info ] |
 | **Season** | [ e.g. 2026–2027 ] |
-| **Status** | 🟡 Planning · 🔨 Building · ✅ Working — *(delete the two that don't apply)* |
+| **Status** | 🟡 Planning · 🔨 Building · ✅ Working · 📦 Season complete — *(delete the ones that don't apply)* |
 | **Last updated** | [ YYYY-MM-DD ] — *([see what changed ↓](#-17-change-log))* |
 
 ---
@@ -34,7 +34,7 @@
 
 ### 🌱 First project? Start with six sections.
 
-Seventeen sections is a lot. **You don't need them all to start.** Fill in these six and you have a real plan you can hand to an AI:
+Eighteen sections is a lot. **You don't need them all to start** — and the last one isn't written until after competition. Fill in these six and you have a real plan you can hand to an AI:
 
 **[§1 One-line summary](#-1-the-one-line-summary) · [§2 The problem](#-2-the-problem--the-objective) · [§3 Goals & non-goals](#-3-goals-and-non-goals-scope) · [§5 User stories](#-5-what-it-should-do-user-stories) · [§6 The rules](#-6-the-rules-this-is-the-brain-of-your-app) · [§14 Build plan](#-14-build-plan-small-steps)**
 
@@ -385,6 +385,31 @@ Describe (or draw) the main parts and how they talk to each other.
 | [YYYY-MM-DD] | Document created | First version of the plan | [ ... ] |
 
 > 💡 A change isn't "done" until both the app *and* this document reflect it. If you only change one, they drift apart and the document stops being trustworthy.
+
+---
+
+## 🏁 18. After the season — what we learned
+
+*Why this matters: Most of our apps are built for **one season** and then replaced, so next year's students get to plan their own (see [`TEAM.md`](./TEAM.md)). They won't inherit your code — they'll inherit **what you figured out.** This section is that.*
+
+**Fill this in once, after your last competition.** Twenty minutes, as a team. Then set the Status at the top of this document to **📦 Season complete**.
+
+**What competition taught us** *(the app finally met reality — what happened?)*
+> [ e.g. "Scouts stopped using the notes field entirely by match 20 — too slow to type in the stands." ]
+
+**Requirements we got wrong** *(the most useful thing here — be honest)*
+- **We assumed** [ ... ] — **actually** [ ... ]
+- **We built** [ ... ] **and never used it.**
+- **We never thought about** [ ... ] **and it hurt.**
+
+**What we'd do differently if we started over**
+- [ ... ]
+- [ ... ]
+
+**What we'd tell next year's team before they start**
+> [ ... ]
+
+> 💡 **The "never used it" list is worth the most.** Every feature nobody touched was time that could have gone into the part that mattered. Next year's team can skip building it at all — that's a week of their season you just gave back.
 
 ---
 ---

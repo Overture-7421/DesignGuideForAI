@@ -95,15 +95,11 @@ Check it against the **success criteria and test checklist in `DESIGN.md` (Secti
 
 ## 🏁 After competition — close it out
 
-This project has an ending. Most of our apps are built for **one season** and then replaced, so next year's students get to plan their own (see [`TEAM.md`](./TEAM.md)). Spend twenty minutes closing yours out properly — this is the part that actually gets used again.
+This project has an ending. Most of our apps are built for **one season** and then replaced, so next year's students get to plan their own (see [`TEAM.md`](./TEAM.md)).
 
-- **What did competition teach you?** The app finally met reality. Something was wrong. Write down what.
-- **Which requirements turned out to be wrong, missing, or unnecessary?** The most valuable thing you can leave behind — it's what stops next year's team making the same call.
-- **What would you do differently if you started over?**
+**Spend twenty minutes on [`DESIGN.md` Section 18](./DESIGN.md#-18-after-the-season--what-we-learned)** — what competition taught you, which requirements you got wrong, what you'd do differently — then set the document's Status to **📦 Season complete**.
 
-Put it at the top of the Change Log in `DESIGN.md`, or as a short section at the end of it.
-
-> 🏆 Next year's team won't inherit your code — they'll build their own. What they inherit is **what you figured out.** That's worth twenty minutes.
+> 🏆 Next year's team won't inherit your code. They'll inherit **what you figured out.** That's worth twenty minutes.
 
 ---
 
