@@ -105,6 +105,12 @@ Seventeen sections is a lot. **You don't need them all to start.** Fill in these
 
 > 💡 **Tip:** When in doubt, put it in "out of scope." You can always add it later. A small app that works beats a big app that doesn't.
 
+**🗓️ How long does this app need to live?**
+- [ ] **One season** — *this is the normal answer.* Our team rebuilds most apps from scratch each year so new students get to plan their own (see [`TEAM.md`](./TEAM.md)).
+- [ ] **Long-term** — only if a mentor has told you this is one of the team's few lasting apps.
+
+*This changes what "good" means.* A one-season app should be built as small and as simply as it can be — you are not building a foundation for anyone, and time spent making it flexible for a future it won't have is time not spent making it actually work at competition.
+
 ---
 
 # PART 2 — WHO USES IT AND WHAT DO THEY DO?
@@ -399,6 +405,18 @@ Describe (or draw) the main parts and how they talk to each other.
 
 > 🧑‍🏫 **The best version of this takes ten minutes:** hand `DESIGN.md` to a mentor or a teammate who's never read it and let them ask. If they can't tell you what the app does afterwards, the answer belongs in the document — not in your head.
 
+### 🔄 Changing the plan later? Come back here.
+
+Any time you want to **add a feature, drop one, or change a rule** mid-build, stop and answer three questions before you touch anything:
+
+1. **What did I learn that I didn't know before?** *(If the honest answer is "nothing — it just sounded good," don't do it.)*
+2. **Does this still fit Section 3, or is the app quietly growing?**
+3. **What comes out to make room?** If nothing does, where is the extra time coming from?
+
+**Most mid-season ideas should fail this, and that's the point.** Your app has one season. Every feature you add is time taken from making the important part actually work at competition — and "we ran out of time" is the single most common way a student project dies.
+
+**Passed all three?** Then it's a real change: update the section it affects, add a line to the [Change Log](#-17-change-log) saying *why*, and carry on.
+
 ---
 
 # 🚀 HAND IT TO THE AI
@@ -412,7 +430,7 @@ Once the green sections are filled in **and you can answer the questions above**
 > *"You are helping a student robotics team build software. Below is our completed software design document. Please do the following, one step at a time:*
 > 1. *First, read the whole thing and ask me about anything that is unclear, contradictory, or missing — especially in the Rules and Edge Cases sections. Don't write code yet.*
 > 2. ***Never invent a requirement.** If something isn't written in this document, you don't know it — ask me instead of assuming or picking something sensible. If I answer vaguely ("fast", "simple", "handle errors"), keep asking until it's specific enough to test. When there's a real choice to make, show me the options and what each one costs, and let **me** decide — even when one is obviously better. I'm here to learn to make these calls.*
-> 3. *Then propose the simplest tech stack that matches our skills. It must run straight from a folder on a laptop with **no build step**, and must **not assume any particular web host or online database** — hosting is a separate decision our mentors make later, and our app has to work without one. Wait for me to agree before continuing.*
+> 3. *Then look at Section 9. **If we already chose a language or framework, that's my decision** — tell me if you'd have chosen differently and why, then go with mine. If it says TODO, propose the simplest option that matches our skills and wait for me to agree. Either way it must run straight from a folder on a laptop with **no build step**, and must **not assume any particular web host or online database** — hosting is a separate decision our mentors make later, and our app has to work without one.*
 > 4. ***Keep it portable the whole way through:** use relative paths (`./file.css`, never `/file.css`), never hardcode a website address, and keep all data saving and loading in one separate file with `async` functions. I must always be able to open the app from a plain folder on my laptop and have it work.*
 > 5. *Then build 'Step 1' from our Build Plan only — the smallest working version. Explain the code simply, as if teaching a beginner.*
 > 6. *After each step works, **ask me to explain back what the code does** before we move on. If I can't, explain it a different way and ask again — I have to be able to defend this project to a judge. Then we move to the next step together.*
