@@ -97,9 +97,9 @@ Check it against the **success criteria and test checklist in `DESIGN.md` (Secti
 
 This project has an ending. Most of our apps are built for **one season** and then replaced, so next year's students get to plan their own (see [`TEAM.md`](./TEAM.md)).
 
-**Spend twenty minutes on [`DESIGN.md` Section 18](./DESIGN.md#-18-after-the-season--what-we-learned)** — what competition taught you, which requirements you got wrong, what you'd do differently — then set the document's Status to **📦 Season complete**.
+At the last meeting of the season a mentor will ask your team what you learned — **which requirements turned out wrong, what you built and never used, what you'd do differently.** Add the answers as a final entry in the `DESIGN.md` Change Log, and set the document's Status to **📦 Season complete**.
 
-> 🏆 Next year's team won't inherit your code. They'll inherit **what you figured out.** That's worth twenty minutes.
+> 🏆 Next year's team won't inherit your code. They'll inherit **what you figured out.**
 
 ---
 
