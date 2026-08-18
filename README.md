@@ -6,13 +6,14 @@
 
 ---
 
-## 🏁 New here? Start in 3 steps
+## 🏁 New here? Start in 4 steps
 
 > 🌳 **Never used GitHub before?** Read [`GIT-BASICS.md`](./GIT-BASICS.md) first — one page, and it's how you get this project onto your laptop without losing work later.
 
-1. **📄 Open [`DESIGN.md`](./DESIGN.md) and fill it in.** This is the plan for your app — what you're building, who it's for, the rules, the data. *Don't write any code yet.* A clear plan is the difference between an app that works and one that doesn't. **Don't know the answers yet?** That's normal, and [`THINKING.md`](./THINKING.md) is how you go find them — they're usually out with the people who'll use the app, not in your head.
-2. **🤖 Hand the plan to an AI and build step by step.** The ready-made prompt is at the bottom of `DESIGN.md`. It tells the AI to question you, build the smallest working version first, refuse to guess at anything you left vague, and teach you as it goes.
-3. **🔄 Keep `DESIGN.md` in sync.** When the app changes, the document changes too, plus a line in its Change Log. **`DESIGN.md` is the single source of truth:** if it's not written there, it's not part of the app.
+1. **🔍 Work out what's actually needed.** Not at your desk — go watch someone do the job your app would replace, and ask them about it. [`THINKING.md`](./THINKING.md) shows you how. *Skipping this is how a team builds a beautiful app nobody uses.*
+2. **📄 Open [`DESIGN.md`](./DESIGN.md) and fill it in.** This is the plan for your app — what you're building, who it's for, the rules, the data. *Don't write any code yet.* A clear plan is the difference between an app that works and one that doesn't.
+3. **🗣️ Defend the plan, then hand it to an AI and build step by step.** Say it out loud to a teammate first — the checklist is near the bottom of `DESIGN.md`, right before the ready-made prompt. The prompt then tells the AI to question you, build the smallest working version first, refuse to guess at anything you left vague, and teach you as it goes.
+4. **🔄 Keep `DESIGN.md` in sync — and commit whenever something works.** When the app changes, the document changes too, plus a line in its Change Log. **`DESIGN.md` is the single source of truth:** if it's not written there, it's not part of the app.
 
 ---
 
@@ -33,19 +34,29 @@
 
 ---
 
-## 🔄 The workflow: plan → build → keep in sync
+## 🔄 The workflow: find out → plan → build → keep in sync
 
 ```
-Fill in DESIGN.md ─► Defend the plan ─► Hand it to the AI ─► Build ONE small step
-       ▲              (out loud, to                                   │
-       │               a real person)                                 ▼
-       │                                                     Does it work — and
-       └──── Update DESIGN.md + Change Log ◄──────────────  can I explain it?
+Find out       ─►  Fill in     ─►  Defend    ─►  Hand it   ─►  Build ONE
+what's needed      DESIGN.md       the plan      to the AI     small step
+      ▲                                                            │
+      │                                                            ▼
+      │                                                       Works? And can
+      │                                                       I explain it?
+      │                                                            │
+      └── Update DESIGN.md ◄──── Commit & push ◄───────────────────┘
+          + Change Log            (right now!)
 ```
 
-**The two middle-ish steps are the ones people skip.** *Defend the plan* catches the wrong app before you build it. *Can I explain it?* catches code that works but isn't really yours. Skip both and you get a project that runs and that nobody on your team understands — the most common way an AI-built project fails.
+**Three of these get skipped, and each one costs you something different:**
 
-The loop never ends — and that's the point. A plan that stayed accurate all season is what lets a judge, a mentor, or next year's team understand what you built.
+- **Find out what's needed** — skip it and you build the wrong app, beautifully.
+- **Defend the plan** — skip it and you find the hole after you've built on top of it.
+- **Can I explain it?** — skip it and the code works but isn't really yours. A judge will find out before you do.
+
+**Commit whenever something works** — right then, not at the end of the day. See [`GIT-BASICS.md`](./GIT-BASICS.md).
+
+Most trips round this loop are short: build, test, commit, update the doc, build the next thing. Occasionally one sends you all the way back out to the people who use it, because you learned the plan was wrong. **That's the loop working, not you failing.**
 
 ---
 
@@ -82,9 +93,23 @@ Check it against the **success criteria and test checklist in `DESIGN.md` (Secti
 
 ---
 
+## 🏁 After competition — close it out
+
+This project has an ending. Most of our apps are built for **one season** and then replaced, so next year's students get to plan their own (see [`TEAM.md`](./TEAM.md)).
+
+At the last meeting of the season a mentor will ask your team what you learned — **which requirements turned out wrong, what you built and never used, what you'd do differently.** Add the answers as a final entry in the `DESIGN.md` Change Log, and set the document's Status to **📦 Season complete**.
+
+> 🏆 Next year's team won't inherit your code. They'll inherit **what you figured out.**
+
+---
+
 ## 🧑‍🏫 For mentors & next year's team
 
-This repo was created from our team's **software project template**, so every student project has the same structure and the same planning document — anyone can pick up anyone else's project and understand it. Improving the template itself? Edit the *template repo*, not this copy.
+This repo was created from our team's **software project template**, so every student project has the same structure and the same planning document.
+
+**Most of our apps are rebuilt fresh each season** so new students get to do the planning themselves — which means the thing worth reading here is [`DESIGN.md`](./DESIGN.md): how this team decided what to build, what they cut, and what turned out to be wrong. **Steal the thinking, not the code.**
+
+Improving the template itself? Edit the *template repo*, not this copy.
 
 **From another team?** You're welcome to use this — that's why it's public. It's [MIT licensed](./LICENSE): take it, change it, make it yours; just keep the credit line in `LICENSE`.
 

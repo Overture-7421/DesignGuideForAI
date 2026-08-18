@@ -26,6 +26,12 @@ The kinds of software projects our students take on:
 - **Mentor apps** — tools that help mentors run the team
 - ...and other team tools as needs come up
 
+**Most apps are rebuilt from scratch each season — on purpose.** New students get to plan and build something of their own instead of inheriting someone else's half-finished code. So assume a project lives **one season** unless a mentor says otherwise:
+- **Build small.** The app has to survive one season, not five. Engineering it for a future it won't have is wasted time — and it's usually why a project doesn't get finished.
+- **What outlives the app is `DESIGN.md`, not the code.** Next year's students read it to learn *how to plan* — not to maintain what was built.
+- **One or two long-term apps are the exception.** If a mentor says a project is one of them, note it in `DESIGN.md` (Section 3). The decisions are different when people still depend on it after the student has graduated.
+- **We close each season with a reflection.** At the last meeting, a mentor asks the team: *which requirements turned out wrong? what did you build and never use? what would you do differently?* The answers go into that project's Change Log as its final entry — a conversation helps the students in the room, but only the written line reaches the students who show up in September.
+
 ## 🧠 What we know (skills & tools)
 - **Overall level: ALWAYS ASSUME BEGINNERS. Always.** Explain everything from scratch, define every piece of jargon, and never assume prior coding knowledge — no matter who's asking.
 - **Tools we already use:** GitHub, VS Code, and WPILib (for robot code).
